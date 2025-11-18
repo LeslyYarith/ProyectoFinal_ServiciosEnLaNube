@@ -8,7 +8,7 @@ $profModel = new Profesor();
 $lista = $profModel->obtenerTodos();
 ?>
 
-<link rel="stylesheet" href="/proyecto_final/public/estilos/estudiantes.css">
+<link rel="stylesheet" href="/proyecto_final/public/estilos/modulos1_2_3.css">
 <div id="alerta-prof" class="alerta"></div>
 
 <div class="estudiantes-container">
