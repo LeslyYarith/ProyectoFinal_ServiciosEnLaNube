@@ -1,0 +1,125 @@
+/* Contenedor de las tarjetas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px;
+    padding: 20px 40px; /* márgenes laterales iguales */
+}
+
+/* Cada tarjeta */
+.card-box {
+    position: relative;
+    padding: 20px;
+    height: 220px;
+
+    border-radius: 12px 40px 12px 40px;
+    box-shadow: 10px 8px 0px 0px #a5a5a5;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    color: #000000;
+    text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Filtro blanco encima de la imagen */
+.card-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.497);
+    backdrop-filter: blur(1.5px);
+}
+
+/* Contenido por encima del filtro */
+.card-box * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título */
+.card-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #ee895d;
+
+    /* 🔹 Fondo blanco que se vuelve transparente hacia la derecha */
+    padding: 5px 12px;
+    display: inline-block; /* Mantiene el tamaño del padding */
+
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.922) 0%,   /* Blanco fuerte al inicio */
+        rgba(255, 255, 255, 0.85) 40%,  /* Mantiene blanco un poco */
+        rgba(255, 255, 255, 0.0) 100%   /* Completamente transparente al final */
+    );
+
+    border-radius: 10px 20px;
+}
+
+/* Descripción */
+.card-box p {
+    flex: 1;
+    font-size: 17px;
+    color: #000000;
+    font-family: "DreamOrphansBd", sans-serif;
+}
+
+/* === Fuente personalizada === */
+@font-face {
+    font-family: "DreamOrphansBd";
+    src: url("/proyecto_final/public/estilos/fonts/Dream-Orphans-Bd.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Aplicar solo a <p> */
+p {
+    font-family: "DreamOrphansBd", sans-serif;
+}
+
+/* Botón abajo a la derecha */
+.card-box button {
+    align-self: flex-end;
+
+    padding: 10px 15px;
+    border: none;
+
+    background: #e19473;
+    color: #fff;
+    font-family: "DreamOrphansBd", sans-serif;
+    font-weight: bold;
+
+    border-radius: 6px 15px 6px 15px;
+    cursor: pointer;
+
+    font-size: 1rem;
+    transition: background .3s ease;
+}
+
+.card-box button:hover {
+    background: #aa5b39;
+}
+
+/* Efecto hover para la tarjeta */
+.card-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
