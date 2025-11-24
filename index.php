@@ -4,8 +4,7 @@ $titulo_pagina = "Inicio";
 ?>
 
 <div class="titulo-modulo">
-    <h2>Bienvenido -</h2>
-    <p>Por favor, selecciona el módulo que desea realizar:</p>
+    <h2>Bienvenido - Seleciona un Modulo:</h2>
 </div>
 
 <!-- 🔹 Contenedor de los 4 recuadros -->
@@ -24,7 +23,7 @@ $titulo_pagina = "Inicio";
         <p>• Registrar profesores.<br> 
            • Listar profesores.<br> 
            • Eliminar profesores. </p>
-        <button onclick="location.href='/proyecto_final/Paginas/Profesores.php'">Ingresar</button>
+       <button onclick="location.href='/proyecto_final/Paginas/Profesores.php'">Ingresar</button>
     </div>
 
     <div class="card-box" style="--bg-img: url('/proyecto_final/public/estilos/img/materias.jpg');">
@@ -40,7 +39,7 @@ $titulo_pagina = "Inicio";
         <p>• Asignar materias a estudiantes. <br>
            • Asignar materias a profesores. <br>
            • Mostrar materias asignadas a cada usuario. </p>
-        <button onclick="location.href='/proyecto_final/Paginas/Asignacion.php'">Ingresar</button>
+       <button onclick="location.href='/proyecto_final/Paginas/Asignacion.php'">Ingresar</button>
     </div>
 
 </div>

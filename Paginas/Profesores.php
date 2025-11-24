@@ -15,7 +15,7 @@ $lista = $profModel->obtenerTodos();
 
     <div class="top-bar">
         <h2 style="color: #e88e64;">Profesores Registrados</h2>
-        <button class="btn-crear" onclick="abrirModalCrearProfesor()">Crear</button>
+        <button class="btn-crear" onclick="abrirModalCrearProfesor()">Registrar</button>
     </div>
 
     <table class="table-lista">
@@ -43,17 +43,17 @@ $lista = $profModel->obtenerTodos();
                 <td><?= $row['Especialidad'] ?></td>
 
                 <td>
-                    <button class="btn-edit" onclick="editarProfesor(event, <?= $row['ID_Profesor'] ?>)">Editar</button>
+                    <button class="btn-edit" onclick="editarProfesor(event, <?= $row['ID_Profesor'] ?>)">Editar✏️</button>
                 </td>
 
                 <td>
-                    <button class="btn-delete" onclick="eliminarProfesor(event, <?= $row['ID_Profesor'] ?>)">Eliminar</button>
+                    <button class="btn-delete" onclick="eliminarProfesor(event, <?= $row['ID_Profesor'] ?>)">Eliminar🗑️</button>
                 </td>
             </tr>
         <?php endwhile; ?>
         </tbody>
     </table>
-
+    <button id="btnVerMas" class="btn-vermas">Ver todos los registros</button>
 </div>
 
 <!-- MODAL FORM -->

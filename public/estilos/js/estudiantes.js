@@ -98,3 +98,42 @@ document.getElementById("formEstudiante").addEventListener("submit", function(ev
         }, 1200);
     });
 });
+
+// ================================
+// MOSTRAR SOLO LOS PRIMEROS 5 REGISTROS
+// ================================
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filas = document.querySelectorAll(".table-lista tbody tr");
+    const btn = document.getElementById("btnVerMas");
+    if (!btn) return; // si no existe el botón, no ejecutar
+
+    const limite = 5;
+    let mostrandoTodo = false;
+
+    // Ocultar todo menos los primeros 5
+    filas.forEach((fila, index) => {
+        if (index >= limite) {
+            fila.style.display = "none";
+        }
+    });
+
+    btn.addEventListener("click", () => {
+
+        mostrandoTodo = !mostrandoTodo;
+
+        filas.forEach((fila, index) => {
+            if (mostrandoTodo) {
+                fila.style.display = "table-row"; // Mostrar todas
+            } else {
+                fila.style.display = index < limite ? "table-row" : "none";
+            }
+        });
+
+        // Cambiar texto del botón
+        btn.textContent = mostrandoTodo
+            ? "Mostrar menos registros"
+            : "Ver todos los registros";
+    });
+
+});

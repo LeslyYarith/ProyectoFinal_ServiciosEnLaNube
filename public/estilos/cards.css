@@ -6,6 +6,19 @@
     padding: 20px 40px; /* márgenes laterales iguales */
 }
 
+.cards-container .card-box {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp .4s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Cada tarjeta */
 .card-box {
     position: relative;
@@ -52,6 +65,7 @@
     font-size: 1.5rem;
     margin-bottom: 8px;
     color: #ee895d;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 
     /* 🔹 Fondo blanco que se vuelve transparente hacia la derecha */
     padding: 5px 12px;

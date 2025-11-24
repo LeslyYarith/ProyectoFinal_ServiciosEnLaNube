@@ -15,7 +15,7 @@ $lista = $materiaModel->obtenerTodas();
 
     <div class="top-bar">
         <h2 style="color: #e88e64;">Materias Registradas</h2>
-        <button class="btn-crear" onclick="abrirModalCrear()">Crear</button>
+        <button class="btn-crear" onclick="abrirModalCrear()">Registrar</button>
     </div>
 
     <table class="table-lista">
@@ -37,17 +37,17 @@ $lista = $materiaModel->obtenerTodas();
                 <td><?= $row['Nombre'] ?></td>
 
                 <td>
-                    <button class="btn-edit" onclick="editarMateria(event, <?= $row['ID_Materia'] ?>)">Editar</button>
+                    <button class="btn-edit" onclick="editarMateria(event, <?= $row['ID_Materia'] ?>)">Editar✏️</button>
                 </td>
 
                 <td>
-                    <button class="btn-delete" onclick="eliminarMateria(event, <?= $row['ID_Materia'] ?>)">Eliminar</button>
+                    <button class="btn-delete" onclick="eliminarMateria(event, <?= $row['ID_Materia'] ?>)">Eliminar🗑️</button>
                 </td>
             </tr>
         <?php endwhile; ?>
         </tbody>
     </table>
-
+    <button id="btnVerMas" class="btn-vermas">Ver todos los registros</button>
 </div>
 
 

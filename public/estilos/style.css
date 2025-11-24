@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f6f6f6;
+    background: #f7f7f7;
     color: #333;
     line-height: 1.6;
 }
@@ -126,15 +126,19 @@ main p {
     padding: 0 60px 40px;
 }
 
-.footer-col p {
+.footer-col a {
+    display: block;
     margin: 8px 0;
     font-size: 0.95rem;
     cursor: pointer;
     opacity: 0.8;
+    font-family: "DreamOrphansBd", sans-serif;
     transition: opacity .3s;
+    color: white;
+    text-decoration: none;
 }
 
-.footer-col p:hover {
+.footer-col a:hover {
     opacity: 1;
 }
 
@@ -173,7 +177,6 @@ main p {
     padding: 12px;
     font-size: 0.85rem;
     opacity: 0.8;
-    border-radius: 0 0 60px 60px;
 }
 
 /* RESPONSIVE */

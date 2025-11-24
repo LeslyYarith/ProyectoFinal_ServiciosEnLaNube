@@ -15,7 +15,7 @@ $lista = $estudianteModel->obtenerTodos();
 
     <div class="top-bar">
         <h2 style="color: #e88e64;">Estudiantes Registrados</h2>
-        <button class="btn-crear" onclick="abrirModalCrear()">Crear</button>
+        <button class="btn-crear" onclick="abrirModalCrear()">Registrar</button>
     </div>
 
     <table class="table-lista">
@@ -40,17 +40,17 @@ $lista = $estudianteModel->obtenerTodos();
                 <td><?= $row['Nombres'] ?> <?= $row['Apellidos'] ?></td>
 
                 <td>
-                    <button class="btn-edit" onclick="editarEstudiante(event, <?= $row['ID'] ?>)">Editar</button>
+                    <button class="btn-edit" onclick="editarEstudiante(event, <?= $row['ID'] ?>)">Editar✏️</button>
                 </td>
 
                 <td>
-                    <button class="btn-delete" onclick="eliminarEstudiante(event, <?= $row['ID'] ?>)">Eliminar</button>
+                    <button class="btn-delete" onclick="eliminarEstudiante(event, <?= $row['ID'] ?>)">Eliminar🗑️</button>
                 </td>
             </tr>
         <?php endwhile; ?>
         </tbody>
     </table>
-
+    <button id="btnVerMas" class="btn-vermas">Ver todos los registros</button>
 </div>
 
 
